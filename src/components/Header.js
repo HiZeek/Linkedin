@@ -3,7 +3,7 @@ import HeaderOptions from './HeaderOptions';
 
 // IMAGES
 import LinkedinLogo from '../img/linkedin.png';
-import Profile from '../img/Profile.jfif'
+// import Profile from '../img/Profile.jfif'
 
 // ICONS
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,6 +18,7 @@ import { logout } from '../features/userSlice';
 
 
 const Header = () => {
+
   const dispatch = useDispatch();
 
   const logoutOfApp = () => {
@@ -40,7 +41,7 @@ const Header = () => {
             <HeaderOptions Icon={BusinessCenterIcon} title='Jobs' />
             <HeaderOptions Icon={ChatIcon} title='Messaging' />
             <HeaderOptions Icon={NotificationsIcon} title='Notifications' />
-            <HeaderOptions avatar={Profile} title='Me' onClick={logoutOfApp} />
+            <HeaderOptions avatar={true} title='Me' onClick={logoutOfApp} />
         </div>
     </div>
   )

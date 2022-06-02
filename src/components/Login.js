@@ -13,6 +13,17 @@ const Login = () => {
 
     const loginToApp = (e) => {
         e.preventDefault();
+        console.log('login event');
+
+        auth.signInWithEmailAndPassword(email, password)
+        .then(userAuth => {
+            dispatch(login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: userAuth.user.displayName,
+                profileUrl: userAuth.user.photoURL,
+            }));
+        }).catch(error => alert(error));
     };
 
     const register = () => {
@@ -41,12 +52,12 @@ const Login = () => {
     <div className='login'>
         <img src="https://content.linkedin.com/content/dam/brand/site/img/logo/logo-tm.png"
         alt="" />
-        <form>
+        <form onSubmit={loginToApp}>
             <input type="text" placeholder='Full name (required if registering)' value={name} onChange={e => setName(e.target.value)} />
             <input type="text" placeholder='Profile pic URL (optional)' value={profilePic} onChange={e => setProfilePic(e.target.value)} />
             <input type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
             <input type="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
-            <button type='submit' onClick={loginToApp}>Sign In</button>
+            <button type='submit'>Sign In</button>
         </form>
         <p>Not a member?{' '}
             <span className='login-register' onClick={register}>Register Now</span>
