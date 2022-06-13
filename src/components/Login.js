@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <div className='login'>
-        <img src="https://content.linkedin.com/content/dam/brand/site/img/logo/logo-tm.png"
+        <img src="https://th.bing.com/th/id/R.684000312182c3cfd7c04d3c3bde1d33?rik=ZWsMhhliYDUzng&pid=ImgRaw&r=0"
         alt="" />
         <form onSubmit={loginToApp}>
             <input type="text" placeholder='Full name (required if registering)' value={name} onChange={e => setName(e.target.value)} />
