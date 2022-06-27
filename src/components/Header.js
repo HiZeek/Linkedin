@@ -35,7 +35,7 @@ const Header = () => {
                 <input type="text" placeholder='Search' />
             </div>
         </div>
-        <div className="header-right">
+        <div className="header-right"> 
             <HeaderOptions Icon={HomeIcon} title='Home' />
             <HeaderOptions Icon={SupervisorAccountIcon} title='My Network' />
             <HeaderOptions Icon={BusinessCenterIcon} title='Jobs' />
