@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import "../styles/Login.css";
 import { auth } from "./Firebase";
 import { login } from "../features/userSlice";
-import {John} from './Feed';
 
 const Login = () => {
   const [email, setEmail] = useState("");
